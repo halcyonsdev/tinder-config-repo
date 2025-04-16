@@ -37,7 +37,7 @@ minio:
     user: minio
     secret: password
   bucket: tinder
-  url: minio:9000
+  url: http://minio:9000
 
 grpc:
   port: 9090
