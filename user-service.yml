@@ -6,7 +6,7 @@ spring:
     name: user-service
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/user_service
+    url: jdbc:postgresql://user-postgres:5432/user_service
     username: postgres
     password: password
 
@@ -21,11 +21,11 @@ spring:
 
   data:
     redis:
-      host: localhost
+      host: redis
       port: 6379
 
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: kafka:9092
 
 jwt:
   secret:
@@ -37,7 +37,7 @@ minio:
     user: minio
     secret: password
   bucket: tinder
-  url: http://172.22.0.2:9000
+  url: minio::9000
 
 grpc:
   port: 9090
