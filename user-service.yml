@@ -6,9 +6,9 @@ spring:
     name: user-service
 
   datasource:
-    url: ${POSTGRES_URL}
-    username: ${POSTGRES_USERNAME}
-    password: ${POSTGRES_PASSWORD}
+    url: jdbc:postgresql://localhost:5432/user_service
+    username: postgres
+    password: password
 
   flyway:
     enabled: true
@@ -21,24 +21,24 @@ spring:
 
   data:
     redis:
-      host: ${REDIS_HOST}
-      port: ${REDIS_PORT}
+      host: localhost
+      port: 6379
 
   kafka:
-    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS}
+    bootstrap-servers: localhost:9092
 
 jwt:
   secret:
-    access: ${JWT_SECRET_ACCESS}
-    refresh: ${JWT_SECRET_REFRESH}
+    access: LA4XZ8oPuhwbaGHpPZBA7j6AzdnaufJxcA3BqN8qu/c/1mKklF+60Ds0PH4W/+yDXtZ4Ptaij135LReqleMEwg==
+    refresh: 40bibBIBBT9lhB4xcAq4PqxBBkpi0Gw5okd8GrlGaLzIYjSPfTG1Xc+WPT0UxqXfyDV4P5WuPMecRkwM+e8c5Q==
 
 minio:
   access:
-    user: ${MINIO_ROOT_USER}
-    secret: ${MINIO_ROOT_PASSWORD}
-  bucket: ${MINIO_BUCKET}
-  url: http://${MINIO_HOST}:${MINIO_PORT}
+    user: minio
+    secret: password
+  bucket: tinder
+  url: http://172.22.0.2:9000
 
 grpc:
-  port: ${GRPC_PORT}
+  port: 9090
   enable-reflection: true
