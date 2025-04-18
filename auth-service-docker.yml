@@ -13,6 +13,16 @@ spring:
   kafka:
     bootstrap-servers: kafka:9092
 
+  cloud:
+    config:
+      uri: http://config-service:8888
+    bus:
+      enabled: true
+    stream:
+      kafka:
+        binder:
+          brokers: kafka:9092
+
 jwt:
   secret:
     access: LA4XZ8oPuhwbaGHpPZBA7j6AzdnaufJxcA3BqN8qu/c/1mKklF+60Ds0PH4W/+yDXtZ4Ptaij135LReqleMEwg==
