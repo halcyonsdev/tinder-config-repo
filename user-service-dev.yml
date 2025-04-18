@@ -1,0 +1,44 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: user-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/user_service
+    username: postgres
+    password: password
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    locations: classpath:db/migration
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+  kafka:
+    bootstrap-servers: localhost:9092
+
+jwt:
+  secret:
+    access: LA4XZ8oPuhwbaGHpPZBA7j6AzdnaufJxcA3BqN8qu/c/1mKklF+60Ds0PH4W/+yDXtZ4Ptaij135LReqleMEwg==
+    refresh: 40bibBIBBT9lhB4xcAq4PqxBBkpi0Gw5okd8GrlGaLzIYjSPfTG1Xc+WPT0UxqXfyDV4P5WuPMecRkwM+e8c5Q==
+
+minio:
+  access:
+    user: minio
+    secret: password
+  bucket: tinder
+  url: http://localhost:9000
+
+grpc:
+  port: 9090
+  enable-reflection: true
