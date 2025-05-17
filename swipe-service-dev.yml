@@ -6,7 +6,7 @@ spring:
     name: swipe-service
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/swipe-service
+    url: jdbc:postgresql://localhost:5432/swipe_service
     username: postgres
     password: password
 
